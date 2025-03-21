@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DatabaseExample</string>
+    <string name="title_text">Исторические события</string>
+    <string name="startText">Введите дату начала ф формате гггг</string>
+    <string name="endText">Введите дату окончания</string>
+    <string name="nameText">Название события</string>
+    <string name="personText">Введите имена персоналий через запятую</string>
+    <string name="descrText">Введите описание события</string>
+    <string name="writeText">Записать</string>
+</resources>
