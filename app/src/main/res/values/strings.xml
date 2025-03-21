@@ -7,4 +7,6 @@
     <string name="personText">Введите имена персоналий через запятую</string>
     <string name="descrText">Введите описание события</string>
     <string name="writeText">Записать</string>
+    <string name="selectText">Введите название события для поиска</string>
+    <string name="findText">Найти</string>
 </resources>

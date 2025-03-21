@@ -43,6 +43,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //TODO добавление записи в базу данных
                 String startText = startDateText.getText().toString();
+                String endText = endDateText.getText().toString();
+                String nameText = nameEventText.getText().toString();
+                String personText = personEventText.getText().toString();
+                String descrText = descrEventText.getText().toString();
+
+                //прямой SQL-запрос
+                String insertQuery = "INSERT INTO " + DBHelper.TABLE_EVENTS
+                        + " (" + DBHelper.EVENTS_START_DATE + ", "
+                        + DBHelper.EVENTS_END_DATE + ", "
+                        + DBHelper.EVENTS_NAME + ", "
+                        + DBHelper.EVENTS_PERSONES + ", "
+                        + DBHelper.EVENTS_DESCRIPTION + ") VALUES ("
+                        + startText + ", " + endText + ", "
+                        + nameText + ", " + personText + ", "
+                        + descrText + ");";
+                sql.execSQL(insertQuery);
             }
         });
     }
