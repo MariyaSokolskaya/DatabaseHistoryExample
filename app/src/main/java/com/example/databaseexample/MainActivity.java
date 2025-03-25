@@ -1,5 +1,6 @@
 package com.example.databaseexample;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     DBHelper dbHelper;
     SQLiteDatabase sql;
     EditText startDateText, endDateText, nameEventText, personEventText, descrEventText;
-    Button writeButton;
+    Button writeButton, activityButton;
     ActivityMainBinding binding;
 
     @Override
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         personEventText = binding.content.personEvent;
         descrEventText = binding.content.descrEvent;
         writeButton = binding.content.writeButton;
+        activityButton = binding.content.activityButton;
 
         writeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,9 +58,17 @@ public class MainActivity extends AppCompatActivity {
                         + DBHelper.EVENTS_PERSONES + ", "
                         + DBHelper.EVENTS_DESCRIPTION + ") VALUES ("
                         + startText + ", " + endText + ", "
-                        + nameText + ", " + personText + ", "
-                        + descrText + ");";
+                        + "\'" + nameText + "\', \'" + personText + "\', \'"
+                        + descrText + "\');";
                 sql.execSQL(insertQuery);
+
+            }
+        });
+        activityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SelectActivity.class);
+                startActivity(intent);
             }
         });
     }

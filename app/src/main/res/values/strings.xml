@@ -9,4 +9,5 @@
     <string name="writeText">Записать</string>
     <string name="selectText">Введите название события для поиска</string>
     <string name="findText">Найти</string>
+    <string name="actButtonText">Перейти к запросу</string>
 </resources>

@@ -56,4 +56,11 @@
         android:text="@string/writeText"
         android:layout_margin="15dp"
         android:id="@+id/writeButton"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/writeButton"
+        android:text="@string/actButtonText"
+        android:layout_margin="15dp"
+        android:id="@+id/activityButton"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
